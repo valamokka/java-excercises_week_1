@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -16,13 +17,18 @@ public class Main {
                         i+1, testResults.get(i), findTheOdd(testArrays.get(i)));
             }
         }
-
-
     }
 
     public static int findTheOdd(int[] numberArray) {
         // ide írd a megoldást, és a main-t tudod futtatni
-
+        if (numberArray.length == 0) {
+            return 0;
+        }
+        for (int i : numberArray) {
+            if (i % 2 != 0) {
+                return i;
+            }
+        }
         return 0;
     }
 }
