@@ -21,8 +21,20 @@ public class Main {
     }
 
     public static int findTheOdd(int[] numberArray) {
-        // ide írd a megoldást, és a main-t tudod futtatni
+	if (numberArray.length == 0) {
+	    return 0;
+	}
 
-        return 0;
+        int odd = 0;
+        for (int i = 0; i < numberArray.length; i++) {
+            if (numberArray[i] % 2 != 0) {
+                if (odd == 0) {
+                    odd = numberArray[i];
+                } else {
+                    return 0;
+                }
+            }
+        }
+        return odd;
     }
 }
